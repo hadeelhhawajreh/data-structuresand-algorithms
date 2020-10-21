@@ -29,11 +29,13 @@ var r=$('<input/>').attr({
 
 const generateSubmitButton = () => {
   // Solution code here...
-  //button type="submit" value="submit">submit</button>')
-     $('form').append('<button type="submit" value="submit">submit</button>');
-    //  let submitB = ('<button type="submit" value="submit">submit </button>');
-    //  $('form').append(submitB);
-  
+  $(()=>{
+   let submitB = $('<input type="button" text="submit" />');
+
+    $('form').append(submitB);
+
+  });
+ 
 
 }
 
@@ -51,8 +53,6 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  let regX = /[0-9]/g;
-  return regX.test(input)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,13 +65,6 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-  let regex = /[A-Z]\w*/g;
-  let result = str.match(regex);
-  if(result === null){
-    return [];
-  } else {
-    return result;
-  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -79,22 +72,9 @@ CHALLENGE 4
 
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
+
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  var arr1 =[];
-
-  arr1.forEach(fun);
-
-  function fun(wor){
-   let rege = /^[A-J].*\w/g;
-   let res = wor.match(rege);
-  
-    if(res !== null){
-     arr1.push(res.toString());
-    }
-  }
-  
-  return(arr1);
 };
 
 /* ------------------------------------------------------------------------------------------------
