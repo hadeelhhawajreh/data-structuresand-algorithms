@@ -74,19 +74,17 @@ let $ = createSnippetWithJQuery(`
 
 const templatingWithMustache = () => {
   // Solution code here...
-  for (let i = 0; i < characters.length; i++) {
-    let templete = $('h2').html();
-    let templete2 = $('h3').html();
-    let templete3 = $('h2').html();
-    let must = Mustache.render(templete, characters.name);
-    let must2 = Mustache.render(templete2, characters.spouse);
-    let must3 = Mustache.render(templete3, characters.house);
-    return must,must2,must3;
-
+  var newArray=[];
+  characters.forEach(element=>{
+    let temp=$('#template').html();
+    let mus=Mustache.render(temp,element);
+    newArray.push(mus);
+  });
+ 
+return newArray;
   }
 
 
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
