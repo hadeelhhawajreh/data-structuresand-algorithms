@@ -21,6 +21,7 @@ let $ = createSnippetWithJQuery(`
 
 const addTea = () => {
   // Solution code here...
+  $('ul').append(`<li>tea</li>`);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,6 +36,12 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
+  let arr2=[];
+  for (let i = 0; i < arr.length; i++) {
+    let temp=Math.pow(2,arr[i]);
+    arr2.push(temp);
+  }
+  return arr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,6 +52,14 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
+  let arr3=[];
+  arr.forEach(element => {
+    let temp2=Math.pow(2,element);
+    arr3.push(temp2);
+
+  });
+  return arr3;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,6 +70,10 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
+ let mapp= arr.map(function(element){
+    return (Math.pow(2,element));
+  });
+  return mapp;
 };
 
 /* ------------------------------------------------------------------------------------------------
