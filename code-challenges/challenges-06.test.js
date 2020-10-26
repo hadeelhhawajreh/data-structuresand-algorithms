@@ -138,18 +138,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
   let value = false;
-  for (let i = 0; i < arr.length; i++) {
-    if (character.hasOwnProperty(arr[i].children)) {
-      value = true;
-    }
-    else {
-
-      value = false;
-    }
-
-  }
-  return value;
-};
+ arr.forEach(element=>{
+   if(character ===element.name){
+     let res=Object.values(element.children);
+     value=Boolean(res.join());
+   }
+ });   return value;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
