@@ -52,7 +52,7 @@ const count = (target, input) => {
   // Solution code here...
   //  include target push to array and arr.length yesssssssssssss
 
-  let arrayFlat= input.flat(1);
+  let arrayFlat= input.flat();
   console.log(typeof(arrayFlat));
   console.log(arrayFlat);
   let anotherArray=arrayFlat.reduce((acc,ele)=>{
@@ -77,7 +77,7 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
-  let arrayFlat= input.flat(1);
+  let arrayFlat= input.flat();
   console.log(typeof(arrayFlat));
   console.log(arrayFlat);
   let anotherArray=arrayFlat.reduce((acc,ele)=>{
